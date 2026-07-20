@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galindo&display=swap" rel="stylesheet">
+
+<style>
+        :root{
+        --green: #459B72;
+        --green-card: #479F75;
+        --orange: #F28344;
+        --soft-blue: #94BFC8; 
+        --soft-pink: #F5B8B7;
+        }
+        *{
+            margin:0;
+            
+        }
+        h1{
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            color:var(--green)  
+        }
+        #shop{
+            color:var(--orange)
+        }
+        #order{
+            text-decoration: None;
+            color:white;
+            background-color: var(--orange);
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            text-align: center;
+            margin:5px;
+        }
+        nav{
+            background-color: var(--orange);
+            
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color:white;
+            font-family: "Fredoka", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-weight: bold;
+            transition:all 1s;
+        }
+
+        a:hover{
+            color:var(--soft-blue)
+        }
+        #img{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXn15Wv50UqkBL8KgcjB9F2uNpT2WA-xnr1Q9lwBKNlmIZ58oV1oW6tmI&s=10');
+            min-height: 300px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        ul{
+            margin:0;
+        }
+        #midtext{
+            font-family: "Galindo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:white;
+        }
+        .txton{
+            background-color: rgba(0,0,0,0.5);
+            width:100%;
+            height:100%;
+            min-height: 300px;
+        }
+        #ourp{
+            text-align: center;
+            font-family: "Galindo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin:10px;
+            color:var(--orange)
+        }
+        article{
+            background-color: var(--orange);
+            min-height: 100px;
+            min-width:100px;
+        }
+        .pname{
+            font-family: "Galindo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:white;
+            margin:5px;
+        }
+        article .pimg{
+            background-image:url('https://file.aiquickdraw.com/imgcompressed/img/compressed_c832e6cc854115f34c3c2cc0f208a4cb.webp');
+            background-position: center center;
+            background-size: contain;
+            height:100px;
+            background-repeat: no-repeat;
+        
+        }
+        article:nth-child(2) .pimg{
+            background-image:url('https://freepngimg.com/save/158711-cheese-burger-png-file-hd/700x487');
+            background-position: center center;
+            background-size: contain;
+            height:100px;
+            background-repeat: no-repeat;    
+        }
+        svg{
+            position:relative;
+            bottom:3px;
+        }
+        
+        article{
+            text-align: center;
+            
+        }
+        ul{
+            margin: 0;
+        }
+        article a:hover{
+            background-color: white;
+            color:var(--orange)
+        }
+        footer{
+            background-color:var(--orange);
+        }
+        footer h2{
+            color:white;
+            font-family: "Galindo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <header class="border-bottom p-4 border-2 d-flex align-items-center justify-content-evenly">
+        <img src="{{url_for('static',filename='icon.png')}}" alt="icon" width="100">
+        <h1>Burger<span id="shop">Shop</span></h1>
+        <a href="#ourp" id="order" class="border rounded-pill p-2">Order Now !</a>
+    </header>
+    <nav>
+        <ul class="d-flex p-3 align-items-center justify-content-evenly">
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100089783388424">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg>
+                </a>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/cart">Cart</a></li>
+            <li><a href="/admin">Admin</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section id="img" class="border-bottom border-2">
+            <div class="txton d-flex justify-content-center align-items-center">
+                <h1 id="midtext" style="margin:0;">
+                    All what you need
+                </h1>
+            </div>
+        </section>
+        <section>
+            <h1 id="ourp">Our Products</h1>
+            <div id="produc" class="d-flex justify-content-evenly align-items-center flex-wrap">
+                <article class="d-flex flex-column align-items-stretch">
+                    <p class="pname">Classic Burger</p>
+                    <div class="pimg"></div>
+                    <a href="" name='classic' class="border rounded-circle p-2 m-3">Order Now</a>
+                </article>
+                <article class="d-flex flex-column align-items-stretch">
+                    <p class="pname">Cheese Burger</p>
+                    <div class="pimg"></div>
+                    <a href="" name="cheese" class="border rounded-circle p-2 m-3">Order Now</a>
+                </article>
+                {% for i in prods %}
+                <article class="d-flex flex-column align-items-stretch m-2">
+                    <p class="pname">{{i.name}}</p>
+                    <div class="pimg" style="background-image: url({{i.image}});"></div>
+                    <a href="" name="{{i.name}}" pic="{{i.image}}" class="border rounded-circle p-2 m-3">Order Now</a>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer class="p-3 mt-3 d-flex flex-column align-items-center">
+        <h2 style="margin:0;">Hamoda Elemary &copy;</h2>
+        
+    </footer>
+    <script>
+        let anchor = document.querySelectorAll('article a')
+        let lst = [];
+        anchor.forEach(node=>{
+            node.addEventListener('click',event=>{
+                event.preventDefault()
+                let name = node.getAttribute('name');
+                let pic = node.getAttribute('pic')
+                if(name=='classic'){
+                    lst.push({'name':name,'pic':'https://file.aiquickdraw.com/imgcompressed/img/compressed_c832e6cc854115f34c3c2cc0f208a4cb.webp'});
+                }else if(name=='cheese'){
+                    lst.push({'name':name,'pic':'https://freepngimg.com/save/158711-cheese-burger-png-file-hd/700x487'})
+                }else{
+                    lst.push({'name':name,'pic':pic})
+                }
+                
+                fetch('/save',{
+                    method:'POST',
+                    headers:{
+                        'Content-Type':'application/json'
+                    },
+                    body:JSON.stringify(lst)
+                })
+                        
+            })
+            
+        })
+        
+    </script>
+</body>
+</html>
